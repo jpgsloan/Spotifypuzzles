@@ -2,9 +2,20 @@ https://labs.spotify.com/puzzles/
 
 My solutions to a couple of the puzzle challenges on spotify's website.
 
-To test them out, download the code and run the following terminal command:  more zipfTest.txt | java Zipf.java
+To test out Zipf Song, download the code and run the following commands from inside the Zipf folder:  
+    
+    javac Zipf.java
+    more zipfTest.txt | java Zipf
 
-ZIPF'S SONG CHALLENGE:
+
+To test ReverseBinary, use the folling commands from the reversebinary folder:
+
+    javac RevBin.java
+    echo 13 | java RevBin
+
+                           -----------------------------
+
+ZIPF'S SONG CHALLENGE DESCRIPTION:
 
 Your slightly pointy-bearded boss has assigned you to write software to find the best songs from different music albums. And the software should be finished in an hour. But don’t panic, you don’t have to solve the problem of writing an AI with good taste. At your disposal is the impeccable taste of a vast horde of long-tailed monkeys. Well, at least almost. The monkeys are not very communicative (or rather, you’re not sure which song “Ook!” is supposed to refer to) so you can’t ask them which songs are the best. What you can do however is to look at which songs the monkeys have listened to and use this information to deduce which songs are the best.
 
@@ -21,7 +32,9 @@ OUTPUT
 Output a list of the m songs with the highest quality qi, in decreasing order of quality. If two songs have the same quality, give precedence to the one appearing first on the album (presumably there was a reason for the producers to put that song before the other).
 
 
-REVERSE BINARY CHALLENGE:
+
+
+REVERSE BINARY CHALLENGE DESCRIPTION:
 
 Yi has moved to Sweden and now goes to school here. The first years of schooling she got in China, and the curricula do not match completely in the two countries. Yi likes mathematics, but now… The teacher explains the algorithm for subtraction on the board, and Yi is bored. Maybe it is possible to perform the same calculations on the numbers corresponding to the reversed binary representations of the numbers on the board? Yi dreams away and starts constructing a program that reverses the binary representation, in her mind. As soon as the lecture ends, she will go home and write it on her computer.
 

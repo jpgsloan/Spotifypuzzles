@@ -4,35 +4,44 @@ import java.io.InputStreamReader;
 
 public class RevBin {
 
-	String batman;
+	int numToRev;
 	
-	public RevBin(){
+	public RevBin() {
 		try {
-			//Take input.
-			BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-			String s = input.readLine();		
-			int x = Integer.parseInt(s);
-			//Check to make sure input is in bounds.
-			if (x > 1000000000 || x < 1) {throw new Exception();}
-			//Change input from decimal to binary.
-			batman = Integer.toBinaryString(x);
-		} catch (Throwable e){
+			// Read in number to reverse.
+			BufferedReader input = new BufferedReader(new InputStreamReader(System.in));		
+			int n = Integer.parseInt(input.readLine());
+
+			// Check that input is in bounds.
+			if (n > 1000000000 || n < 1) { 
+				throw new Exception();
+			} else {
+				numToRev = n;
+			}
+		} catch (Throwable e) {
 			System.exit(0);
 		}
 	}
 	
-	public String reverse(String tmp){
-		//Appends characters of binary string in reverse order to stringbuffer
-		StringBuffer robin = new StringBuffer();	
-		for (int i = tmp.length() - 1; i>=0; i = i-1){
-			robin.append(tmp.charAt(i));
+	public int reverse() {
+		// Switch to binary string.
+		String numAsBin = Integer.toBinaryString(numToRev);
+
+		// Appends characters of binary string to stringbuffer in reverse order.
+		StringBuffer reversedBin = new StringBuffer();	
+		for (int i = numAsBin.length() - 1; i >= 0; i--) {
+			reversedBin.append(numAsBin.charAt(i));
 		}
-		return robin.toString();
+		
+		// Switch back to integer.
+		int reversedInt = Integer.valueOf(reversedBin.toString(), 2);
+
+		return reversedInt;
 	}
 
 	public static void main(String[] args) {
-			RevBin hey = new RevBin();
-			System.out.print(Integer.valueOf(hey.reverse(hey.batman),2));
+			RevBin reverseBinary = new RevBin();
+			System.out.println(reverseBinary.reverse());
 	}
 
 }
