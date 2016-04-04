@@ -8,12 +8,13 @@ To test out Zipf Song, download the code and run the following commands from ins
     more zipfTest.txt | java Zipf
 
 
-To test ReverseBinary, use the folling commands from the reversebinary folder:
+To test ReverseBinary, use the following commands from the reversebinary folder (with whatever number you want to reverse in place of 13):
 
     javac RevBin.java
     echo 13 | java RevBin
 
-                           -----------------------------
+
+-----------------------------
 
 ZIPF'S SONG CHALLENGE DESCRIPTION:
 
